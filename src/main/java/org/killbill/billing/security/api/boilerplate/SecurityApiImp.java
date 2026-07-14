@@ -22,6 +22,7 @@ import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
 import org.killbill.billing.security.Logical;
@@ -67,6 +68,10 @@ public class SecurityApiImp implements SecurityApi {
     @Override
     public void login(final Object principal, final Object credentials) {
         throw new UnsupportedOperationException("login(java.lang.Object, java.lang.Object) must be implemented.");
+    }
+    @Override
+    public Map<String, List<String>> getAvailableRoles(final TenantContext tenantContext) {
+        throw new UnsupportedOperationException("getAvailableRoles(org.killbill.billing.util.callcontext.TenantContext) must be implemented.");
     }
     @Override
     public List<String> getRoleDefinition(final String role, final TenantContext tenantContext) {
